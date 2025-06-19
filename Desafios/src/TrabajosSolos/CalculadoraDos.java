@@ -1,8 +1,8 @@
-package ModeloUno;
+package TrabajosSolos;
 
 import java.util.Scanner;
 
-public class CalculadoraUno {
+public class CalculadoraDos {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         char continuacion = 's' ;
@@ -23,28 +23,28 @@ public class CalculadoraUno {
             int opcion = entrada.nextInt();
             switch (opcion) {
                 case 1:
-                    double suma = numeroUno + numeroDos;
-                    System.out.println("el resultado de la suma es: " + suma);
+                    double resultadoSuma = FuncionesCalculadora.sumar(numeroUno, numeroDos);
+                    System.out.println("Resultado de la suma: " + resultadoSuma);
                     break;
                 case 2:
-                    double resta = numeroUno - numeroDos;
-                    System.out.println(" el resultado de la resta: " + resta);
+                    double resultadoResta = FuncionesCalculadora.resta(numeroUno, numeroDos);
+                    System.out.println("Resultado de la resta: " + resultadoResta);
                     break;
                 case 3:
-                    double multiplicacion = numeroUno * numeroDos;
-                    System.out.println("el resultado de la multiplicacion es: " + multiplicacion);
+                    double resultadoMultiplicacion = FuncionesCalculadora.multiplicar( numeroUno, numeroDos);
+                    System.out.println("Resultado de la multiplicación: " + resultadoMultiplicacion);
                     break;
                 case 4:
                     if (numeroDos != 0) {
-                        double division = numeroUno / numeroDos;
-                        System.out.println("el resultado de la division es: " + division);
+                        double resultadoDivision = FuncionesCalculadora.division(16, 2);
+                        System.out.println("Resultado de la division: " + resultadoDivision);
                     } else {
                         System.out.println("la division no se puede hacer por cero");
                     }
                     break;
                 case 5:
-                    double modulo = numeroUno % numeroDos;
-                    System.out.println("el resultado del modulo es: " + modulo);
+                    double resultadoModulo = FuncionesCalculadora.modulo(17, 9);
+                    System.out.println("Resultado del modulo: " + resultadoModulo);
                     break;
                 default:
                     System.out.println("opcion no valida");
@@ -53,10 +53,10 @@ public class CalculadoraUno {
             System.out.println("¿Quieres hacer otra operacion?");
             System.out.println("si o no");
             continuacion = entrada.next().charAt(0);
+
         }
         System.out.println("Gracias por usar esta calculadora");
 
 
-
+        }
     }
-}
